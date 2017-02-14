@@ -1,0 +1,13 @@
+Contains the test scripts which are ready to run
+##1
+SECFiling_10k_10kA_DifferentFiscalPeriodVsFiscalYear.py: This script searches for formtype ie 10-K/10-KA ,etc. and the filingPeriod & fiscalYearEnd are compared.
+If they are different, the _id, entityId,etc. are printed to a csv file.
+##2
+fiscalYearEndDifferent.py: This script first searches for entityId in entityReferences collection and then using that entityId, a cursor,"SECfiling is defined. 
+Variable x is assigned None and a variable knownfe is assigned a dictionary dict(). In the first for loop, variable a is assigned to the fiscalYearEnd values.
+If X!=None then the else loop is executed and x=a and the dictionary stores the value of a. Now the loop executes again but with x=a.
+If a!=x the badentity=True and the bad data is written into the csv and the count is incremented and printed.
+##3
+otherResulsRevenue.py: This script searches for the term "revenue" in the TermRules collection. 
+The if loop compares otherTermResults.vaalue and TermResults.value and utputs into a csv file if the otherTermResults.value is greater.
+##
